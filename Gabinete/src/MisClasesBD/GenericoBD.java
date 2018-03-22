@@ -8,6 +8,7 @@ package MisClasesBD;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class GenericoBD {
 
@@ -17,20 +18,20 @@ public class GenericoBD {
     private static String url = "jdbc:mysql://localhost:3307/" + nombreBD;
 
     private static Connection con;
-
     // ESTABLECER CONEXION
     public static Connection abrirConexion() throws ClassNotFoundException, SQLException, Exception {
-        Class.forName("com.mysql.jdbc.Driver");
-        con = DriverManager.getConnection(url, user, pass);
-
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection(url, user, pass);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
         return con;
     }
 
-    public Connection getConnection() {
-        return con;
-    }
-
-    public void desconectar() {
-        con = null;
+    //CERRAR CONEXION
+    public static void cerrarConexion() throws SQLException, Exception {
+        con.close();
     }
 }

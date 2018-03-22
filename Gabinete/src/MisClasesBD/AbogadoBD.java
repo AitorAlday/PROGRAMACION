@@ -31,6 +31,18 @@ public class AbogadoBD extends GenericoBD{
         
         pS.executeUpdate();
         
-        desconectar();
+        cerrarConexion();
+    }
+    public static void borrarAbogado(Abogado dni) throws SQLException, Exception {
+        plantilla = "DELETE FROM abogados where dni = ?";
+        
+        pS = abrirConexion().prepareStatement(plantilla);
+        
+        pS.setString(1, dni.getDni());
+
+        pS.executeUpdate();
+        
+        cerrarConexion();
+        
     }
 }

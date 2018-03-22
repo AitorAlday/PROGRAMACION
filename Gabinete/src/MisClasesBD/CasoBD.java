@@ -36,6 +36,6 @@ public class CasoBD extends GenericoBD{
         
         pS.executeUpdate();
         
-        desconectar();
+        cerrarConexion();
     }
 }

@@ -35,6 +35,6 @@ public class ClienteBD extends GenericoBD{
         
         pS.executeUpdate();
         
-        desconectar();
+        cerrarConexion();
     }
 }
