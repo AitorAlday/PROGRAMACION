@@ -8,6 +8,8 @@ package gabinete;
 import MisClases.*;
 import MisClasesBD.*;
 import MisVentanas.*;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,6 +21,7 @@ public class Gabinete {
     public static AbogadoBD aBD;
     public static ClienteBD clBD;
     public static CasoBD caBD;
+    public static ArrayList <AbogadoBD> abogado;
 
     public static void main(String[] args) {
         aBD = new AbogadoBD();
@@ -41,6 +44,10 @@ public class Gabinete {
         Abogado a = new Abogado(dni, nombre, ape1, ape2, dir);
 
         aBD.insertarBD(a);
+    }
+
+    public static void borrarAbogadoPorDni(String dni) {
+        
     }
 
     
