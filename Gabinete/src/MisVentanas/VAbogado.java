@@ -165,6 +165,11 @@ public class VAbogado extends javax.swing.JFrame {
             {
                 case "Alta":
                     gabinete.Gabinete.generarAbogado(tfDniA.getText(), tfNombreA.getText(), tfApe1.getText(), tfApe2.getText(), tfDirA.getText());
+                    tfDniA.setText("");
+                    tfNombreA.setText("");
+                    tfApe1.setText("");
+                    tfApe2.setText("");
+                    tfDirA.setText("");
                     break;
                 case "Modificar":
                     //funcion
