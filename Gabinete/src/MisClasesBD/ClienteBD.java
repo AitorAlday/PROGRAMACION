@@ -6,8 +6,6 @@
 package MisClasesBD;
 
 import MisClases.Cliente;
-import static MisClasesBD.GenericoBD.abrirConexion;
-import static MisClasesBD.GenericoBD.cerrarConexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -37,6 +35,6 @@ public class ClienteBD extends GenericoBD{
         
         pS.executeUpdate();
         
-        cerrarConexion();
+        desconectar();
     }
 }

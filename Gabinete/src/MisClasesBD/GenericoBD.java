@@ -12,9 +12,10 @@ import java.sql.SQLException;
 public class GenericoBD {
 
     private static String nombreBD = "gabinete";
-    private static String url = "jdbc:mysql://localhost:3307/" + nombreBD;
     private static String user = "root";
     private static String pass = "usbw";
+    private static String url = "jdbc:mysql://localhost:3307/" + nombreBD;
+
     private static Connection con;
 
     // ESTABLECER CONEXION
@@ -25,8 +26,11 @@ public class GenericoBD {
         return con;
     }
 
-    //CERRAR CONEXION
-    public static void cerrarConexion() throws SQLException, Exception {
-        con.close();
+    public Connection getConnection() {
+        return con;
+    }
+
+    public void desconectar() {
+        con = null;
     }
 }

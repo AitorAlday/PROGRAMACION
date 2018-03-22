@@ -14,26 +14,33 @@ import MisVentanas.*;
  * @author aitor
  */
 public class Gabinete {
-    private static V1 vP;
-    private static AbogadoBD vABD;
+    public static V1 vP;
+    public static VAbogado vA;
+    public static AbogadoBD aBD;
+    public static ClienteBD clBD;
+    public static CasoBD caBD;
 
     public static void main(String[] args) {
-
-// INICIO MAIN
-        vABD = new AbogadoBD();
-
-        abrirVentanaPrincipal(vP = new V1());
+        aBD = new AbogadoBD();
+        clBD = new ClienteBD();
+        caBD = new CasoBD();
+        
+        vP = new V1();
+        vP.setVisible(true);
+        vP.setLocationRelativeTo(null);
 
     }
 
-    private static void abrirVentanaPrincipal(V1 vPrincipal) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void abrirAbogado(String dato) {        
+        vA = new VAbogado(dato);
+        vA.setVisible(true);
+        vA.setLocationRelativeTo(null);
     }
 
     public static void generarAbogado(String dni, String nombre, String ape1, String ape2, String dir) throws Exception {
         Abogado a = new Abogado(dni, nombre, ape1, ape2, dir);
 
-        vABD.insertarBD(a);
+        aBD.insertarBD(a);
     }
 
     

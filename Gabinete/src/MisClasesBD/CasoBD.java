@@ -7,8 +7,6 @@ package MisClasesBD;
 
 import MisClases.Caso;
 import MisClases.Cliente;
-import static MisClasesBD.GenericoBD.abrirConexion;
-import static MisClasesBD.GenericoBD.cerrarConexion;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -38,6 +36,6 @@ public class CasoBD extends GenericoBD{
         
         pS.executeUpdate();
         
-        cerrarConexion();
+        desconectar();
     }
 }

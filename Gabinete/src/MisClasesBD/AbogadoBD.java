@@ -31,6 +31,6 @@ public class AbogadoBD extends GenericoBD{
         
         pS.executeUpdate();
         
-        cerrarConexion();
+        desconectar();
     }
 }
