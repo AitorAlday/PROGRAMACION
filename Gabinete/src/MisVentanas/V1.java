@@ -27,7 +27,8 @@ public class V1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
@@ -41,49 +42,55 @@ public class V1 extends javax.swing.JFrame {
         jMenu10 = new javax.swing.JMenu();
         jMenu11 = new javax.swing.JMenu();
         jMenu12 = new javax.swing.JMenu();
+        jMenu17 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MisVentanas/Justicia.jpg"))); // NOI18N
 
-        jMenu2.setText("Baja");
+        jButton1.setText("jButton1");
 
-        jMenu4.setText("Abogado");
+        jMenu2.setText("Abogado");
+
+        jMenu4.setText("Alta");
         jMenu2.add(jMenu4);
 
-        jMenu5.setText("Cliente");
+        jMenu5.setText("Baja");
         jMenu2.add(jMenu5);
 
-        jMenu6.setText("Caso");
+        jMenu6.setText("Modificar");
         jMenu2.add(jMenu6);
 
         jMenuBar1.add(jMenu2);
 
-        jMenu1.setText("Alta");
+        jMenu1.setText("Cliente");
 
-        jMenu7.setText("Abogado");
+        jMenu7.setText("Alta");
         jMenu1.add(jMenu7);
 
-        jMenu8.setText("Cliente");
+        jMenu8.setText("Baja");
         jMenu1.add(jMenu8);
 
-        jMenu9.setText("Caso");
+        jMenu9.setText("Modiicar");
         jMenu1.add(jMenu9);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu3.setText("Modificar");
+        jMenu3.setText("Caso");
 
-        jMenu10.setText("jMenu10");
+        jMenu10.setText("Alta");
         jMenu3.add(jMenu10);
 
-        jMenu11.setText("jMenu11");
+        jMenu11.setText("Baja");
         jMenu3.add(jMenu11);
 
-        jMenu12.setText("jMenu12");
+        jMenu12.setText("Modificar");
         jMenu3.add(jMenu12);
 
         jMenuBar1.add(jMenu3);
+
+        jMenu17.setText("SALIR");
+        jMenuBar1.add(jMenu17);
 
         setJMenuBar(jMenuBar1);
 
@@ -91,17 +98,15 @@ public class V1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(361, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(325, 325, 325))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 875, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(253, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(251, 251, 251))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -143,11 +148,13 @@ public class V1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
+    private javax.swing.JMenu jMenu17;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
