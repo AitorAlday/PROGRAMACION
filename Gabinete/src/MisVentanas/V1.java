@@ -33,17 +33,17 @@ public class V1 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jmModificarAb = new javax.swing.JMenuItem();
+        jmAltaAb = new javax.swing.JMenuItem();
+        jmBajaAb = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        jmModificarCl = new javax.swing.JMenuItem();
+        jmAltaCl = new javax.swing.JMenuItem();
+        jmBajaCl = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        jmModificarCa = new javax.swing.JMenuItem();
+        jmAltaCa = new javax.swing.JMenuItem();
+        jmBajaCa = new javax.swing.JMenuItem();
         jMenu17 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,65 +59,75 @@ public class V1 extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem3.setText("Modificar");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jmModificarAb.setText("Modificar");
+        jmModificarAb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jmModificarAbActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jMenu2.add(jmModificarAb);
 
-        jMenuItem1.setText("Alta");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jmAltaAb.setText("Alta");
+        jmAltaAb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jmAltaAbActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem1);
+        jMenu2.add(jmAltaAb);
 
-        jMenuItem2.setText("Baja");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jmBajaAb.setText("Baja");
+        jmBajaAb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jmBajaAbActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
+        jMenu2.add(jmBajaAb);
 
         jMenuBar1.add(jMenu2);
 
         jMenu1.setText("Cliente");
 
-        jMenuItem4.setText("Modificar");
-        jMenu1.add(jMenuItem4);
-
-        jMenuItem5.setText("Alta");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jmModificarCl.setText("Modificar");
+        jmModificarCl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jmModificarClActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem5);
+        jMenu1.add(jmModificarCl);
 
-        jMenuItem6.setText("Baja");
-        jMenu1.add(jMenuItem6);
+        jmAltaCl.setText("Alta");
+        jmAltaCl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmAltaClActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmAltaCl);
+
+        jmBajaCl.setText("Baja");
+        jmBajaCl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmBajaClActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmBajaCl);
 
         jMenuBar1.add(jMenu1);
 
         jMenu3.setText("Caso");
 
-        jMenuItem7.setText("Modificar");
-        jMenu3.add(jMenuItem7);
+        jmModificarCa.setText("Modificar");
+        jMenu3.add(jmModificarCa);
 
-        jMenuItem8.setText("Alta");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        jmAltaCa.setText("Alta");
+        jmAltaCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                jmAltaCaActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem8);
+        jMenu3.add(jmAltaCa);
 
-        jMenuItem9.setText("Baja");
-        jMenu3.add(jMenuItem9);
+        jmBajaCa.setText("Baja");
+        jMenu3.add(jmBajaCa);
 
         jMenuBar1.add(jMenu3);
 
@@ -148,26 +158,48 @@ public class V1 extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jMenu2ActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jmAltaAbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAltaAbActionPerformed
         gabinete.Gabinete.abrirAbogado("Alta");
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jmAltaAbActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    private void jmAltaClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAltaClActionPerformed
+        gabinete.Gabinete.abrirCliente("Alta");
+    }//GEN-LAST:event_jmAltaClActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    private void jmAltaCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAltaCaActionPerformed
+        
+    }//GEN-LAST:event_jmAltaCaActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jmModificarAbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmModificarAbActionPerformed
         gabinete.Gabinete.abrirAbogado("Modificar");
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jmModificarAbActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        String cod = JOptionPane.showInputDialog(null, "Introduce el DNI del abogado que quieres borrar");
-        gabinete.Gabinete.borrarAbogadoPorDni(cod);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void jmBajaAbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmBajaAbActionPerformed
+        try
+        {
+            String cod = JOptionPane.showInputDialog(null, "Introduce el DNI del abogado que quieres borrar");
+            gabinete.Gabinete.borrarAbogadoPorDni(cod);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+        }
+        
+    }//GEN-LAST:event_jmBajaAbActionPerformed
+
+    private void jmModificarClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmModificarClActionPerformed
+        gabinete.Gabinete.abrirCliente("Modificar");
+    }//GEN-LAST:event_jmModificarClActionPerformed
+
+    private void jmBajaClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmBajaClActionPerformed
+        try
+        {
+            String cod = JOptionPane.showInputDialog(null, "Introduce el DNI del cliente que quieres borrar");
+            gabinete.Gabinete.borrarClientePorDni(cod);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_jmBajaClActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,14 +244,14 @@ public class V1 extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem jmAltaAb;
+    private javax.swing.JMenuItem jmAltaCa;
+    private javax.swing.JMenuItem jmAltaCl;
+    private javax.swing.JMenuItem jmBajaAb;
+    private javax.swing.JMenuItem jmBajaCa;
+    private javax.swing.JMenuItem jmBajaCl;
+    private javax.swing.JMenuItem jmModificarAb;
+    private javax.swing.JMenuItem jmModificarCa;
+    private javax.swing.JMenuItem jmModificarCl;
     // End of variables declaration//GEN-END:variables
 }

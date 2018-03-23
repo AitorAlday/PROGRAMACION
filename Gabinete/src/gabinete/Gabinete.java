@@ -18,10 +18,10 @@ import javax.swing.JOptionPane;
 public class Gabinete {
     public static V1 vP;
     public static VAbogado vA;
+    public static VCliente vC;
     public static AbogadoBD aBD;
     public static ClienteBD clBD;
     public static CasoBD caBD;
-    public static ArrayList <AbogadoBD> abogado;
 
     public static void main(String[] args) {
         aBD = new AbogadoBD();
@@ -33,7 +33,8 @@ public class Gabinete {
         vP.setLocationRelativeTo(null);
 
     }
-
+    
+    //ABOGADO
     public static void abrirAbogado(String dato) {        
         vA = new VAbogado(dato);
         vA.setVisible(true);
@@ -46,9 +47,54 @@ public class Gabinete {
         aBD.insertarBD(a);
     }
 
-    public static void borrarAbogadoPorDni(String dni) {
+    public static void borrarAbogadoPorDni(String dni) throws Exception{
+        AbogadoBD aBd = new AbogadoBD();
         
+        aBd.borrarAbogado(dni);
     }
 
+    public static void actualizarAbogado(String dni, String nombre, String ape1, String ape2, String dir) throws Exception{
+        Abogado aBd = new Abogado(dni, nombre, ape1, ape2, dir);
+        
+        AbogadoBD.actualizarAbogado(aBd);
+    }
     
+    public static boolean buscarAbogadoPorDni(String dni) throws Exception{
+        return AbogadoBD.sacarInfo(dni);
+    }
+    
+    //CLIENTE
+     public static void abrirCliente(String dato) {        
+        vC = new VCliente(dato);
+        vC.setVisible(true);
+        vC.setLocationRelativeTo(null);
+    }
+
+    public static void generarCliente(String dni, String nombre, String ape1, String ape2, String dir, String tlf) throws Exception {
+        Cliente c = new Cliente(dni, nombre, ape1, ape2, dir, tlf);
+
+        clBD.insertarBD(c);
+    }
+
+    public static void borrarClientePorDni(String dni) throws Exception{
+        ClienteBD cBd = new ClienteBD();
+        
+        cBd.borrarCliente(dni);
+    }
+
+    public static void actualizarCliente(String dni, String nombre, String ape1, String ape2, String dir, String tlf) throws Exception{
+        Cliente c = new Cliente(dni, nombre, ape1, ape2, dir, tlf);
+        
+        ClienteBD.actualizarCliente(c);
+    }
+    
+    public static boolean buscarClientePorDni(String dni) throws Exception{
+        return ClienteBD.sacarInfo(dni);
+    }
+    //CASO
 }
+    
+    
+
+    
+

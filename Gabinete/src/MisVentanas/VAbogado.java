@@ -18,6 +18,7 @@ public class VAbogado extends javax.swing.JFrame {
     public VAbogado(String dato) {
         initComponents();
         eleccion = dato;
+        jLabel7.setVisible(false);
     }
 
     /**
@@ -42,6 +43,7 @@ public class VAbogado extends javax.swing.JFrame {
         tfDirA = new javax.swing.JTextField();
         bAceptar = new javax.swing.JButton();
         bVolver = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +80,9 @@ public class VAbogado extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel7.setText("Inserta el dni para buscar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,13 +93,24 @@ public class VAbogado extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(bAceptar))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(50, 50, 50)
+                                        .addComponent(tfDirA, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
                                     .addComponent(jLabel2))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(tfApe1, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                                    .addComponent(tfDniA))
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(tfApe1, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                        .addComponent(tfDniA)))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,16 +124,7 @@ public class VAbogado extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel3)
                                         .addGap(70, 70, 70)
-                                        .addComponent(tfNombreA))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(bAceptar))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(50, 50, 50)
-                                        .addComponent(tfDirA, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(tfNombreA))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jLabel1)))
@@ -134,7 +141,9 @@ public class VAbogado extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(tfDniA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfNombreA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel7)
+                .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
@@ -155,7 +164,23 @@ public class VAbogado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tfDniAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfDniAActionPerformed
-        // TODO add your handling code here:
+        try 
+        {
+            if (tfDniA.getText().isEmpty()) 
+            {
+                JOptionPane.showMessageDialog(this, "Hace falta meter un DNI para buscar:");
+                
+            } 
+            else 
+            {
+                boolean aB = gabinete.Gabinete.buscarAbogadoPorDni(tfDniA.getText());
+            }
+
+        } 
+        catch (Exception e) 
+        {
+            JOptionPane.showMessageDialog(null, "Error" + e.getMessage());
+        }
     }//GEN-LAST:event_tfDniAActionPerformed
 
     private void bVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVolverActionPerformed
@@ -176,7 +201,8 @@ public class VAbogado extends javax.swing.JFrame {
                     tfDirA.setText("");
                     break;
                 case "Modificar":
-                    //funcion
+                    jLabel7.setVisible(true);
+                    gabinete.Gabinete.actualizarAbogado(tfDniA.getText(), tfNombreA.getText(), tfApe1.getText(), tfApe2.getText(), tfDirA.getText());
                     break;
             }
         }
@@ -195,6 +221,7 @@ public class VAbogado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField tfApe1;
     private javax.swing.JTextField tfApe2;
     private javax.swing.JTextField tfDirA;

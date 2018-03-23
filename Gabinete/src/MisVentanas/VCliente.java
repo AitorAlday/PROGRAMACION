@@ -176,9 +176,15 @@ public class VCliente extends javax.swing.JFrame {
             switch(eleccion)
             {
                 case "Alta":
+                    gabinete.Gabinete.generarCliente(tfDni.getText(), tfNombre.getText(), tfApe1.getText(), tfApe2.getText(), tfDir.getText(), tfTel.getText());
+                    tfDni.setText("");
+                    tfNombre.setText("");
+                    tfApe1.setText("");
+                    tfApe2.setText("");
+                    tfDir.setText("");
                     break;
                 case "Modificar":
-                    //funcion
+                    gabinete.Gabinete.actualizarCliente(tfDni.getText(), tfNombre.getText(), tfApe1.getText(), tfApe2.getText(), tfDir.getText(), tfTel.getText());
                     break;
             }
         }
