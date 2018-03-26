@@ -44,7 +44,7 @@ public class ClienteBD extends GenericoBD{
     public static boolean sacarInfo(String dni) throws SQLException, Exception {
          boolean encontrado;
 
-        plantilla = "SELECT * FROM abogados WHERE DNI = ?;";
+        plantilla = "SELECT * FROM clientes WHERE DNI = ?;";
 
         pS = abrirConexion().prepareStatement(dni);
 

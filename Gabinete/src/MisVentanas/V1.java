@@ -45,6 +45,7 @@ public class V1 extends javax.swing.JFrame {
         jmAltaCa = new javax.swing.JMenuItem();
         jmBajaCa = new javax.swing.JMenuItem();
         jMenu17 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -116,6 +117,11 @@ public class V1 extends javax.swing.JFrame {
         jMenu3.setText("Caso");
 
         jmModificarCa.setText("Modificar");
+        jmModificarCa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmModificarCaActionPerformed(evt);
+            }
+        });
         jMenu3.add(jmModificarCa);
 
         jmAltaCa.setText("Alta");
@@ -127,11 +133,25 @@ public class V1 extends javax.swing.JFrame {
         jMenu3.add(jmAltaCa);
 
         jmBajaCa.setText("Baja");
+        jmBajaCa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmBajaCaActionPerformed(evt);
+            }
+        });
         jMenu3.add(jmBajaCa);
 
         jMenuBar1.add(jMenu3);
 
         jMenu17.setText("SALIR");
+
+        jMenuItem2.setText("Salir del programa");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu17.add(jMenuItem2);
+
         jMenuBar1.add(jMenu17);
 
         setJMenuBar(jMenuBar1);
@@ -160,18 +180,22 @@ public class V1 extends javax.swing.JFrame {
 
     private void jmAltaAbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAltaAbActionPerformed
         gabinete.Gabinete.abrirAbogado("Alta");
+        this.setVisible(false);
     }//GEN-LAST:event_jmAltaAbActionPerformed
 
     private void jmAltaClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAltaClActionPerformed
         gabinete.Gabinete.abrirCliente("Alta");
+        this.setVisible(false);
     }//GEN-LAST:event_jmAltaClActionPerformed
 
     private void jmAltaCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAltaCaActionPerformed
-        
+        gabinete.Gabinete.abrirCaso("Alta");
+        this.setVisible(false);
     }//GEN-LAST:event_jmAltaCaActionPerformed
 
     private void jmModificarAbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmModificarAbActionPerformed
         gabinete.Gabinete.abrirAbogado("Modificar");
+        this.setVisible(false);
     }//GEN-LAST:event_jmModificarAbActionPerformed
 
     private void jmBajaAbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmBajaAbActionPerformed
@@ -188,6 +212,7 @@ public class V1 extends javax.swing.JFrame {
 
     private void jmModificarClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmModificarClActionPerformed
         gabinete.Gabinete.abrirCliente("Modificar");
+        this.setVisible(false);
     }//GEN-LAST:event_jmModificarClActionPerformed
 
     private void jmBajaClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmBajaClActionPerformed
@@ -200,6 +225,26 @@ public class V1 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
         }
     }//GEN-LAST:event_jmBajaClActionPerformed
+
+    private void jmModificarCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmModificarCaActionPerformed
+        gabinete.Gabinete.abrirCaso("Modificar");
+        this.setVisible(false);
+    }//GEN-LAST:event_jmModificarCaActionPerformed
+
+    private void jmBajaCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmBajaCaActionPerformed
+        try
+        {
+            String cod = JOptionPane.showInputDialog(null, "Introduce el número de expediente del caso que quieres borrar");
+            gabinete.Gabinete.borrarCasoPorNum(cod);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_jmBajaCaActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,6 +289,7 @@ public class V1 extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jmAltaAb;
     private javax.swing.JMenuItem jmAltaCa;
     private javax.swing.JMenuItem jmAltaCl;

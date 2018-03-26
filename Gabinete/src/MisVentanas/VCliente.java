@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 public class VCliente extends javax.swing.JFrame {
 
     private static String eleccion;
+    private static V1 vP;
     
     public VCliente(String dato) {
         initComponents();
@@ -44,6 +45,7 @@ public class VCliente extends javax.swing.JFrame {
         bVolver = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         tfTel = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,10 +84,19 @@ public class VCliente extends javax.swing.JFrame {
 
         jLabel7.setText("Telefono");
 
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel8.setText("Insertar el dni para buscar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(bAceptar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bVolver)
+                .addGap(164, 164, 164))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -97,48 +108,47 @@ public class VCliente extends javax.swing.JFrame {
                                 .addComponent(tfTel, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel6)
+                                    .addGap(50, 50, 50)
+                                    .addComponent(tfDir, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel4)
                                         .addComponent(jLabel2))
                                     .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(tfApe1, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                                        .addComponent(tfDni))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel3))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(tfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(tfApe2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jLabel6)
-                                    .addGap(50, 50, 50)
-                                    .addComponent(tfDir, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(jLabel8)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(tfApe1, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                                .addComponent(tfDni))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel5)
+                                                .addComponent(jLabel3))
+                                            .addGap(18, 18, 18)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(tfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(tfApe2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
+                        .addContainerGap()
                         .addComponent(jLabel1)))
                 .addContainerGap(90, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addComponent(bAceptar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bVolver)
-                .addGap(164, 164, 164))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(28, 28, 28)
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(tfDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel8)
+                .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
@@ -167,7 +177,11 @@ public class VCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_tfDniActionPerformed
 
     private void bVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVolverActionPerformed
+        vP = new V1();
+        vP.setVisible(true);
+        vP.setLocationRelativeTo(null);
         
+        this.setVisible(false);
     }//GEN-LAST:event_bVolverActionPerformed
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
@@ -182,6 +196,7 @@ public class VCliente extends javax.swing.JFrame {
                     tfApe1.setText("");
                     tfApe2.setText("");
                     tfDir.setText("");
+                    tfTel.setText("");
                     break;
                 case "Modificar":
                     gabinete.Gabinete.actualizarCliente(tfDni.getText(), tfNombre.getText(), tfApe1.getText(), tfApe2.getText(), tfDir.getText(), tfTel.getText());
@@ -204,6 +219,7 @@ public class VCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField tfApe1;
     private javax.swing.JTextField tfApe2;
     private javax.swing.JTextField tfDir;

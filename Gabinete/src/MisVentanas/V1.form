@@ -78,6 +78,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modificar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmModificarCaActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jmAltaCa">
               <Properties>
@@ -91,6 +94,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Baja"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmBajaCaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -98,6 +104,16 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="SALIR"/>
           </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Salir del programa"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
         </Menu>
       </SubComponents>
     </Menu>

@@ -19,9 +19,12 @@ public class Gabinete {
     public static V1 vP;
     public static VAbogado vA;
     public static VCliente vC;
+    public static VCaso vCa;
     public static AbogadoBD aBD;
     public static ClienteBD clBD;
     public static CasoBD caBD;
+    public static ArrayList <Abogado> ab;
+    
 
     public static void main(String[] args) {
         aBD = new AbogadoBD();
@@ -92,6 +95,18 @@ public class Gabinete {
         return ClienteBD.sacarInfo(dni);
     }
     //CASO
+    public static void abrirCaso(String dato) {        
+        vCa = new VCaso(dato);
+        vCa.setVisible(true);
+        vCa.setLocationRelativeTo(null);
+    }
+
+    public static void borrarCasoPorNum(String cod)throws Exception {
+        CasoBD cBd = new CasoBD();
+        
+        cBd.borrarCaso(cod);
+    }
+    
 }
     
     

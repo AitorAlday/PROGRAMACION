@@ -23,53 +23,47 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+              <Component id="bAceptar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="215" max="32767" attributes="0"/>
+              <Component id="bVolver" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
+          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="tfEstado" min="-2" pref="146" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="bAceptar" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="tfDirA" min="-2" pref="262" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="tfFecFin" min="-2" pref="156" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel7" pref="147" max="32767" attributes="0"/>
-                                  <Component id="tfApe1" pref="147" max="32767" attributes="0"/>
-                                  <Component id="tfDniA" max="32767" attributes="0"/>
+                                  <Component id="cbAbogado" max="32767" attributes="0"/>
+                                  <Component id="cbCliente" pref="133" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="tfApe2" min="-2" pref="156" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="bVolver" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Component id="tfNombreA" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="tfNum" pref="156" max="32767" attributes="0"/>
+                                  <Component id="tfFecIni" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -79,7 +73,7 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="75" max="32767" attributes="0"/>
+              <EmptySpace pref="88" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -92,29 +86,32 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfDniA" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfNombreA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbAbogado" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfApe1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfApe2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfFecIni" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbCliente" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfDirA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfFecFin" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="42" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="23" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="bAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="bVolver" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -125,46 +122,39 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="ABOGADO"/>
+        <Property name="text" type="java.lang.String" value="CASO"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="DNI"/>
+        <Property name="text" type="java.lang.String" value="Abogado"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre"/>
+        <Property name="text" type="java.lang.String" value="N&#xfa;mero de expediente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Primer apellido"/>
+        <Property name="text" type="java.lang.String" value="Cliente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Segundo apelldio"/>
+        <Property name="text" type="java.lang.String" value="Fecha de inicio"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Direccion"/>
+        <Property name="text" type="java.lang.String" value="Fecha de terminaci&#xf3;n"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfDniA">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfDniAActionPerformed"/>
-      </Events>
+    <Component class="javax.swing.JTextField" name="tfNum">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfNombreA">
+    <Component class="javax.swing.JTextField" name="tfFecIni">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfApe1">
-    </Component>
-    <Component class="javax.swing.JTextField" name="tfApe2">
-    </Component>
-    <Component class="javax.swing.JTextField" name="tfDirA">
+    <Component class="javax.swing.JTextField" name="tfFecFin">
     </Component>
     <Component class="javax.swing.JButton" name="bAceptar">
       <Properties>
@@ -184,11 +174,33 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Inserta el dni para buscar"/>
+        <Property name="text" type="java.lang.String" value="Estado"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfEstado">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbAbogado">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbAbogadoActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbCliente">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
